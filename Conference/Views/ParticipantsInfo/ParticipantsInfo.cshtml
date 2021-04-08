@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Demo.Helper.External.Models.Users>
+@{
+    ViewBag.Title = "ParticipantsInfo";
+}
+
+<h2>ParticipantsInfo</h2>
+
+<table class="table-dates2">
+    <tr class="tr-da" style="width: 900px;">
+        <td class="td-da" style="width: 150px;"><b>First Name</b></td>
+        <td class="td-da" style="width: 150px;"><b>Last Name</b></td>
+        <td class="td-da" style="width: 150px;"><b>Company / Institution</b></td>
+        <td class="td-da" style="width: 150px;"><b>Country</b></td>
+        <td class="td-da" style="width: 150px;"><b>Participation in Social Events</b></td>
+    </tr>
+    @if (Model == null) { }
+    else
+    {
+        foreach (var item in Model)
+        {
+            <tr class="tr-da" style="width: 900px;">
+                <td class="td-da" style="width: 150px;">@item.FirstName</td>
+                <td class="td-da" style="width: 150px;">@item.LastName</td>
+                <td class="td-da" style="width: 150px;">@item.Institution</td>
+                <td class="td-da" style="width: 150px;">@item.Country</td>
+                <td class="td-da" style="width: 150px;">@item.SocialEvents</td>
+            </tr>
+        }
+    }
+
+</table>

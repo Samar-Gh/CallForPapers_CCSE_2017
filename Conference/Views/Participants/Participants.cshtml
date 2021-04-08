@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Conference.Models.Participants> 
+@{
+    ViewBag.Title = "Participants";
+}
+
+
+<h2>Participants</h2>
+
+@if (Model == null) { }
+else
+{
+    <p>
+        There are 
+        @foreach (var item in Model)
+        {
+        @item.Nr;
+        }
+        participants registered from which 
+        @foreach (var item in Model)
+        {
+            @item.SocialEvents;
+        }
+        participate in the social event.
+    </p>
+}
+
+
+

@@ -1,0 +1,93 @@
+﻿@model Conference.Models.Users
+
+
+<h2>Registration</h2>
+<p>The price of participating at the conference is 4€.</p>
+
+@*@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+    }*@
+
+@using (Html.BeginForm("Registration", "Registration", FormMethod.Post))
+{
+    <fieldset>
+        <legend>To register fill out the following fields:</legend>
+    </fieldset>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.FirstName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+    </div>
+
+    <br /><br />
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LastName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+    </div>
+
+    <br /><br />
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Institution, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Institution, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Institution)
+        </div>
+    </div>
+
+    <br /><br />
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Country, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Country, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Country)
+        </div>
+    </div>
+
+    <br /><br />
+
+    <div >
+        @Html.LabelFor(model => model.SocialEvents, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            <label>@Html.RadioButtonFor(model => model.SocialEvents, "Yes") Yes</label>
+            <label>@Html.RadioButtonFor(model => model.SocialEvents, "No") No</label>
+            @Html.ValidationMessageFor(model => model.SocialEvents)
+        </div>
+    </div>
+
+    <br /><br />
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+    </div>
+
+    <br /><br />
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Register" />
+        </div>
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+
+    }
+}
+
+<div>
+    <p style="text-align:center">@ViewBag.result </p>
+</div>

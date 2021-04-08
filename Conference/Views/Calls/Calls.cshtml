@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Conference.Models.Calls>
+@{
+    ViewBag.Title = "Calls";
+}
+
+<h2>Call for Papers</h2>
+
+<h3>International Conference for Computer Science 2017</h3>
+<h4>January 30th 2017 at TU Ilmenau</h4>
+<br />
+<p style="text-align: justify;">
+    Beside the general topic of Computer Science, the following topics may also be considered for papers:
+</p>
+
+    @foreach (var item in Model)
+    {
+        <p style="text-align: justify;">&nbsp; • @item.TopicName</p>
+    }
+
+    <h3>Submission guidelines:</h3>
+
+<p style="text-align: justify;">
+    Please submit your paper by December 18, 2016 at the latest via mail to
+    <a href="mailto:michael.sommer@tu-ilmenau.de">michael.sommer@tu-ilmenau.de</a>.
+    Please follow the instructions regarding format and size of contributions. 
+    Papers shall not exceed 6 pages (without counting title page, ToC, bibliography etc.). 
+    As there is not special format specification given, please refer to the general rules taught by the presentation of 
+    “How to write a research paper” which was subject of this course’s seminar “Research Skills” in preparation to this
+    conference. Please see the links mentioned at point 2 at 
+    <a href="https://www.tu-ilmenau.de/vsbs/lehre/ws-201617/research-skills-rcse-program/research-skills-course-material/">
+    https://www.tu-ilmenau.de/vsbs/lehre/ws-201617/research-skills-rcse-program/research-skills-course-material/
+    </a> 
+    for more information. Papers shall be submitted in PDF format in two different versions: <b>one with and one without</b> 
+    mentioning the author’s/co-author’s name(s). Your submission must be accompanied by a short autobiography (basic
+    personal information, previous university, bachelor thesis, working experience, etc.). Please also state
+    to which above mentioned topics you would consider your paper match to the most.
+</p>
+<p style="text-align: justify;">
+    All papers will be reviewed by a double-blind process (where the author and the reviewer is kept
+    anonymously to each other). Each paper will be reviewed by at least 3 referees with regards to quality,
+    relevance, originality and correctness. Each paper will get feedback. Papers can be accepted for
+    presentation, accepted for poster or rejected. After acceptance papers might have to undergo a polish
+    in order to be published.
+</p>

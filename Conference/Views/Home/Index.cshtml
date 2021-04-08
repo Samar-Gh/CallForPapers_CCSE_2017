@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Conference.Models.Schedule>
+@{
+    ViewBag.Title = "International Conference for Computer Science 2017";
+}
+
+<div>
+    <h2>Call for Papers</h2>
+
+    <h3>International Conference for Computer Science 2017</h3>
+    <h4>January 30th 2017 at TU Ilmenau</h4>
+    <br />
+
+    
+    <p style="text-align: justify;"> Modern technology is a part of our personal everyday life experience as well as businesses. Today
+software can be found everywhere and it’s going to be more. That’s going along with devices
+containing more and more powerful processors or are embedded in certain highly adapted situations.</p>
+    <p style="text-align: justify;">TU Ilmenau has established a conference within this domain that is held internally by students of RCSE
+master program. The 2017 edition of the International Conference on Computer Science continues the
+success of those held in previous year.</p>
+
+        <h3>Important dates:</h3>
+        <table class="table-dates">
+            @foreach (var item in Model)
+            {
+                <tr class="tr-da">
+                    <td class="td-da">@item.Info</td>
+                    <td class="td-da">@item.ScheduleDate.ToShortDateString()</td>
+                </tr>
+            }
+        </table>
+</div>
+<div>
+    <table style="width:100%">
+        <tr>
+            <td>
+                <h2>Location</h2>
+                <p style="text-align: justify; padding-right:50px;">
+                    The city of Ilmenau with a population of 26000 inhabitants has its most important institution, the Technische Universität Ilmenau, Thuringia's second-largest university with about 7,000 students. Since 1990, many research institutes have been established in the area around the university making Ilmenau an important hub of technological research.
+                </p>
+            </td>
+            <td>
+                <img src="~/Content/Images/location.jpg" alt="Alternate Text" />
+            </td>
+        </tr>
+    </table>
+</div>

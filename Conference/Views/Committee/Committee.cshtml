@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Conference.Models.Committee>
+@{
+    ViewBag.Title = "OrganizationCommittee";
+}
+
+<h2>Organization Committee</h2>
+
+@foreach (var item in Model)
+{
+    <h3>@item.Function :</h3>
+    <h4>&nbsp;&nbsp;&nbsp; • @item.FirstName @item.LastName</h4>
+    <h4>@item.Info @item.Country</h4>
+}
+

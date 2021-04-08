@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - International Conference for Computer Science 2017</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="page-main">
+        <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#00949d; border:0px;">
+            <div class="container" style="max-width:1100px;">
+                @*<div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("ICCS 2017", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>*@
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("ICCS 2017", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        @*<li>@Html.ActionLink("Info", "About", "Home")</li>*@
+                        <li>@Html.ActionLink("Calls for papers", "Calls", "Calls")</li>
+                        <li>@Html.ActionLink("Schedule", "Schedule", "Schedule")</li>
+                        <li>@Html.ActionLink("Registration", "Registration", "Registration")</li>
+                        @*<li>@Html.ActionLink("Committee", "Committee", "Committee")</li>*@
+                        <li>@Html.ActionLink("Participants", "Participants", "Participants")</li> 
+                        <li>@Html.ActionLink("Location", "Location", "Location")</li> 
+                        <li>@Html.ActionLink("Venues", "Venues", "Venues")</li> 
+                        <li>@Html.ActionLink("Social Events", "SocialEvents", "SocialEvents")</li> 
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content content-bottom">
+            <div>
+                <img src="~/Content/Images/ilmenau.jpg" alt="Alternate Text" />
+            </div>
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - TU Ilmenau - Samar Shahabi Ghahfarokhi</p>
+                <br /><br /><br />
+            </footer>
+        </div>
+        <div class="bottombar">
+            <div>
+                <table align="center">
+                    <tr>
+                        <td>
+                            <h3>Organization: &nbsp;</h3>
+                        </td>
+                        <td>
+                            <a href="https://www.tu-ilmenau.de">
+                                <img src="~/Content/Images/logoTUI.png" height="40" />
+                            </a>
+                            &nbsp;&nbsp;
+                        </td>
+                        
+                        <td>
+                            <h3>Sponsors: &nbsp;</h3>
+                        </td>
+                        <td>
+                            <a href="https://www.tu-ilmenau.de/en/distributed-systems-and-operating-systems-group/">
+                                <img src="~/Content/Images/sponsorDSOS.gif" height="60" />
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
