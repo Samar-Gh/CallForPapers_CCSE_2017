@@ -1,0 +1,145 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* NEW */
+
+/* Page width*/
+.page-main {
+    width: 960px;
+    margin:0 auto;
+}
+
+.table-dates {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 40%;
+}
+
+.table-dates2 {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.td-da, th-da {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.tr-da:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #00f5ff;
+  background-color: transparent;
+}
+
+h2{
+    color:#00949d;
+}
+
+h3{
+    color:#00555f;
+}
+
+h4{
+    color:#002d37;
+}
+
+form-width{
+    width:500px;
+}
+.col-pos{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.bottombar{
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background-color: rgba(200, 200, 200, 0.83);
+    max-height: 60px;
+}
+.table2{
+    color:#00949d;
+}
+.td-empty{
+    border:none;
+}
+.td22{
+    width:50px;
+    text-align:center;
+    color:white;
+    background-color:#002d37;
+    border-style:solid;
+    border-color:aliceblue;
+}
+.td23{
+    width:50px;
+    text-align:center;
+    color:white;
+    background-color:#025c67;
+    border-style:solid;
+    border-color:aliceblue;
+}
+.tdp{
+    color:black;
+    padding-left:5px;
+    font-style:italic;
+}
+.tdbreak{
+    background-color:#BBBBBB;
+    padding-left:5px;
+    color:#002d37;
+}
+.tdpres{
+    background-color:#00949d;
+    border-color:#00949d;
+    padding-left:5px;
+    color:#002d37;
+}
+.tdpart{
+    background-color:#4c6364;
+    border-color:#00949d;
+    padding-left:5px;
+    color:#dddddd;
+    font-weight:bold;
+}
+.tdr{
+    background-color:cornflowerblue;
+    border-color:#00949d;
+    padding-left:5px;
+    color:white;
+}
